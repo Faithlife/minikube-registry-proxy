@@ -1,0 +1,8 @@
+version: '2.1'
+services:
+  minikube-registry-proxy:
+    build: .
+    privileged: true
+    network_mode: host
+    volumes:
+    - ~/.minikube:/minikube
