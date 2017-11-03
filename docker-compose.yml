@@ -1,8 +1,10 @@
 version: '2.1'
 services:
   minikube-registry-proxy:
-    build: .
+    image: faithlife/minikube-registry-proxy
     privileged: true
     network_mode: host
+    environment:
+    - MINIKUBE_IP=192.168.64.2
     volumes:
     - ~/.minikube:/minikube
