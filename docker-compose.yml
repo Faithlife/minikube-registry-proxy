@@ -5,6 +5,6 @@ services:
     privileged: true
     network_mode: host
     environment:
-    - MINIKUBE_IP=192.168.64.2
+    - MINIKUBE_IP=${MINIKUBE_IP}
     volumes:
     - ~/.minikube:/minikube

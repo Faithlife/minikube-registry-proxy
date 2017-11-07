@@ -21,6 +21,6 @@ It allows your Docker version to be newer than the version supported by Minikube
 
 1. Start the minikube-registry-proxy:
 
-   `curl -L https://github.com/Faithlife/minikube-registry-proxy/raw/master/docker-compose.yml | docker-compose up -d`
+   `curl -L https://github.com/Faithlife/minikube-registry-proxy/raw/master/docker-compose.yml | MINIKUBE_IP=$(minikube ip) docker-compose -p mkr up -d`
 
 You can now push images with a `localhost:5000/` tag prefix and pull them into Minikube.
