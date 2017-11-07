@@ -4,6 +4,7 @@ services:
     image: faithlife/minikube-registry-proxy
     privileged: true
     network_mode: host
+    read_only: true
     environment:
     - MINIKUBE_IP=${MINIKUBE_IP}
     volumes:
